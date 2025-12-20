@@ -12,7 +12,7 @@
 
 [部品表](BOM.md)
 
-回路図
+[回路図](esp32-mouse-rev03-xiao-esp32c6.pdf)
 
 ## ソフトウェア構成
 
