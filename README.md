@@ -17,7 +17,7 @@
 ## ソフトウェア構成
 
 ### Arduino IDE
-* [Arduino](Arduino)
+* [Arduinoスケッチ](Arduino/README.md)
 
 ### 必須ライブラリ
 Arduino IDEのライブラリマネージャから以下のライブラリをインストールしてください。
