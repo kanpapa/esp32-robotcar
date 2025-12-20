@@ -10,9 +10,14 @@
 * **モータードライバ**: Hブリッジモータードライバ (2モーター制御用)
 * **モーター**: DCモーター x 2 (左車輪・右車輪)
 
+[部品表](BOM.md)
+
+回路図
+
 ## ソフトウェア構成
 
 ### Arduino IDE
+* [Arduino](Arduino)
 
 ### 必須ライブラリ
 Arduino IDEのライブラリマネージャから以下のライブラリをインストールしてください。
@@ -20,3 +25,7 @@ Arduino IDEのライブラリマネージャから以下のライブラリをイ
 * **Adafruit GFX Library**
 * **Adafruit SSD1306**
 * **Ticker** (ESP32標準搭載)
+
+## 外観
+
+![](images/esp32-minicar1.jpg)
