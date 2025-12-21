@@ -1,6 +1,6 @@
-# XIAO ESP32C6 Micro-Mouse Robot Control
+# XIAO ESP32C6 mini-car
 
-このプロジェクトは、**Seeed Studio XIAO ESP32C6** を搭載した小型二輪ロボット（マイクロマウス）向けの制御プログラムです。
+**Seeed Studio XIAO ESP32C6** を搭載した小型二輪ロボット（ミニカー）のプロジェクトです。
 
 ## ハードウェア構成
 
