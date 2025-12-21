@@ -1,4 +1,4 @@
-# XIAO ESP32C6 mini-car
+# ESP32 mini-car
 
 **Seeed Studio XIAO ESP32C6** を搭載した小型二輪ロボット（ミニカー）のプロジェクトです。
 
