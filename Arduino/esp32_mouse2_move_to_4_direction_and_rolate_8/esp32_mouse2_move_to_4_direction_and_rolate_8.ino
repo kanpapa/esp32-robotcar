@@ -52,7 +52,7 @@ const float WALL_THRESHOLD_CM = 15.0; // 前方の壁判断の閾値 (cm)
 
 void setup()
 {
-  Serial.begin(99600);
+  Serial.begin(9600);
 
   pinMode(TRIG_PIN, OUTPUT);
   digitalWrite(TRIG_PIN, LOW);
