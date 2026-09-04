@@ -30,8 +30,8 @@
 #define SCREEN_ADDRESS 0x3C  // OLEDのI2Cアドレス
 
 // --- 超音波距離センサー（HC-SR04など）のピン ---
-const int TRIG_PIN = D10;  // 超音波を発信するピン
-const int ECHO_PIN = D9;   // 反射波を受信するピン
+const int TRIG_PIN = D8;  // 超音波を発信するピン
+const int ECHO_PIN = D10; // 反射波を受信するピン
 
 // 距離センサーのタイムアウト用（これ以上遠いものは測らない）
 const unsigned long MAX_DISTANCE_TIMEOUT_US = 23200 * 1.5;
