@@ -80,44 +80,24 @@ void setup() {
   display.println("Booting...");
   display.display();
 
-#ifdef VISION_AI
-  // for Grove Vision AI V2
-  // I2Cバッファサイズを 256 バイトに拡大（デフォルトは128バイト、最小32バイト）
-  Wire.setBufferSize(256);
-  delay(2000); // Vision AI V2のブート待ち
-
-  Serial.println("Connecting to Vision AI V2...");
-
-  bool connected = false;
-  for (int i = 0; i < 5 && !connected; i++) {
-    connected = AI.begin(&Wire, -1, 0x62, 2, 100000);
-    if (!connected) {
-      Serial.println("Retry...");
-      showDebug("Vision AI: retry...", -1, 0);
-      delay(500);
-    }
-  }
-
-  if (connected) {
-    Serial.println("Vision AI V2 connected!");
-    showDebug("Vision AI: OK", -1, 0);
-  } else {
-    Serial.println("Vision AI V2 connection failed!");
-    showDebug("Vision AI: FAILED", -1, 0);
-    while (true) { delay(1000); }
-  }
-#else
   // for ESP32S3 Sense
   delay(3000); // ESP32S3 Senseのブート待ち（カメラ+モデルロード完了を待つ）
 
   Serial.println("Connecting to ESP32S3 Sense...");
+  display.println("Connecting to ESP32S3 Sense...");
+  display.display();
 
   AISerial.begin(921600, SERIAL_8N1, AI_RX_PIN, AI_TX_PIN);
 
   bool connected = false;
   for (int i = 0; i < 10 && !connected; i++) {
     connected = AI.begin(&AISerial);
-    if (!connected) { delay(500); }
+    if (!connected) { 
+      delay(500);
+      display.print(i);
+      display.print(".");
+      display.display();
+    }
   }
 
   if (connected) {
@@ -126,9 +106,10 @@ void setup() {
   } else {
     Serial.println("ESP32S3 Sense connection failed!");
     showDebug("ESP32S3 Sense: FAILED", -1, 0);
-    while (true) { delay(1000); }
+    while (true) { // 無限ループで停止
+      delay(1000);
+    }
   }
-#endif
 
   pinMode(AIN1, OUTPUT);
   pinMode(AIN2, OUTPUT);
