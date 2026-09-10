@@ -1,8 +1,8 @@
-# ESP32 mini-car
+# ESP32 robot-car
 
-**Seeed Studio XIAO ESP32C6** を搭載した小型二輪ロボット（ミニカー）のプロジェクトです。
+**Seeed Studio XIAO ESP32シリーズ** を搭載した小型二輪ロボットカーのプロジェクトです。
 
-## ハードウェア構成
+## 基本ハードウェア構成
 
 * **マイコン**: Seeed Studio XIAO ESP32C6
 * **ディスプレイ**: SSD1306 0.96インチ OLED (I2C接続)
@@ -14,7 +14,7 @@
 
 [回路図](esp32-mouse-rev03-xiao-esp32c6.pdf)
 
-## ソフトウェア構成
+## 基本ソフトウェア構成
 
 ### Arduino IDE
 * [Arduinoスケッチ](Arduino/README.md)
@@ -28,4 +28,10 @@ Arduino IDEのライブラリマネージャから以下のライブラリをイ
 
 ## 外観
 
-![](images/esp32-minicar1.jpg)
+### 基本ロボットカー
+
+![基本ロボットカー](images/esp32-minicar1.jpg)
+
+### AI搭載ロボットカー
+
+![AI搭載ロボットカー](images/esp32-robotcar-esp32s3-sense-1.jpg)
